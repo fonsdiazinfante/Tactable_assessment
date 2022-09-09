@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Pagination from "../hooks/pagination";
-import NavBar from "../hooks/navbar";
+import Pagination from "../../hooks/pagination";
+import NavBar from "../../hooks/navbar";
 import Stack from 'react-bootstrap/Stack';
 
 
