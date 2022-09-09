@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -18,24 +17,24 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by choosing which assesment you want to see
+          Get started by choosing which assesment you want to go to
         </p>
 
         <div className={styles.grid}>
-          <Link href="/posts" className={styles.card}>
+          <a href="/posts" className={styles.card}>
             <h2>Frontend &rarr;</h2>
             <p>Posts from an API response are rendered and shown.</p>
-          </Link>
+          </a>
 
-          <Link href="/backend" className={styles.card}>
+          <a href="/backend" className={styles.card}>
             <h2>Backend &rarr;</h2>
             <p>Backend Assessment (WIP)</p>
-          </Link>
+          </a>
 
-          <Link href="/data" className={styles.card}>
+          <a href="/data" className={styles.card}>
             <h2>Data &rarr;</h2>
             <p>Data Assessment (WIP)</p>
-          </Link>
+          </a>
 
         </div>
       </main>
