@@ -14,7 +14,16 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to the Tactable assessment
+          Welcome to the Tactable 
+          <img
+              src="tactable.jpeg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="Tactable logo"
+            />
+            assessment
+          
         </h1>
 
         <p className={styles.description}>
@@ -25,7 +34,7 @@ const Home: NextPage = () => {
           <Link href="/posts">
             <a  className={styles.card}>
               <h2>Frontend &rarr;</h2>
-              <p>Posts from an API response are rendered and shown.</p>
+              <p>Posts from an API response are rendered to the user.</p>
             </a>
           </Link>
 

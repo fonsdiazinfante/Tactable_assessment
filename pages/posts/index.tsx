@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card';
 import Pagination from "../../hooks/pagination";
 import NavBar from "../../hooks/navbar";
 import Stack from 'react-bootstrap/Stack';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 
 
 export default function BlogsList() {
@@ -29,6 +31,11 @@ async function fetchBlog() {
   setPosts(data)
 }
 
+function dateConversion(timestamp:string){
+ var date = new Date(timestamp)
+ return date.toLocaleDateString()
+}
+
 
   useEffect(() => {
     fetchBlog()
@@ -38,16 +45,34 @@ async function fetchBlog() {
     <>
     <NavBar/>
     <div style={{padding: "4em"}}>
-    <Stack gap={2} className="col-md-5 mx-auto">
+    <Stack gap={5} className="col-md-5 mx-auto">
       {currentPaginationData.map((post) => (
         <Card key={post.id} style={{ width: 'auto', margin: 'auto' }}>
             <Card.Img variant="top" src='books.jpeg' alt="Picture of the author"/>
             <Card.Body>
-                <Card.Title>{post.title}</Card.Title>
+                <Card.Title>{post.title.charAt(0).toUpperCase()+ post.title.slice(1)}</Card.Title>
                 <Card.Text>
                     {post.description}
                 </Card.Text>
-                <Button variant="primary" href={'/posts/'+post.title}>Go to {post.title}</Button>
+                <OverlayTrigger
+                    trigger="click"
+                    key={"right"}
+                    placement={"right"}
+                    overlay={
+                        <Popover id={`popover-positioned-right`}>
+                        <Popover.Header as="h3">Details</Popover.Header>
+                        <Popover.Body>
+                            <strong>Created on:</strong> {dateConversion(post.createdAt)}
+                                <br/>
+                            <strong>Updated on:</strong> {dateConversion(post.updatedAt)}
+                                <br/>
+                            <strong>By:</strong> {post.authors[0].name}
+                        </Popover.Body>
+                        </Popover>
+                    }
+                    >
+                    <Button variant="primary">{post.title.charAt(0).toUpperCase()+ post.title.slice(1)} Details</Button>
+                    </OverlayTrigger>
             </Card.Body>
         </Card>
       ))}

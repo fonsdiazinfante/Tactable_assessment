@@ -17,7 +17,7 @@ const Pagination:React.FC <Props>= ({
   handleNextPage,
 }) => {
   return (
-    <div className="pagination-button-wrapper" style={{ padding: '3em', width: '50%', margin: 'auto' }}>
+    <div className="pagination-button-wrapper" style={{ padding: '1em', width: '50%', margin: 'auto' }}>
       <Button
         variant="primary"
         className="pagination-button"
