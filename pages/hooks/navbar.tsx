@@ -22,25 +22,25 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav>
-                <link href="/">
+                <Link href="/">
                     Home
-                </link>
+                </Link>
             </Nav>
             <NavDropdown title="Assessments" id="basic-nav-dropdown">
               <NavDropdown.Item>
-                <link href="/posts">
+                <Link href="/posts">
                     Front End
-                </link>
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <link href="/backend">
+                <Link href="/backend">
                     Back End
-                </link>
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <link href="/data">
+                <Link href="/data">
                     Data
-                </link>
+                </Link>
             </NavDropdown.Item>
             </NavDropdown>
           </Nav>
