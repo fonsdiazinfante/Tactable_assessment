@@ -21,20 +21,20 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="/posts" className={styles.card}>
+          <link href="/posts" className={styles.card}>
             <h2>Frontend &rarr;</h2>
             <p>Posts from an API response are rendered and shown.</p>
-          </a>
+          </link>
 
-          <a href="/backend" className={styles.card}>
+          <link href="/backend" className={styles.card}>
             <h2>Backend &rarr;</h2>
             <p>Backend Assessment (WIP)</p>
-          </a>
+          </link>
 
-          <a href="/data" className={styles.card}>
+          <link href="/data" className={styles.card}>
             <h2>Data &rarr;</h2>
             <p>Data Assessment (WIP)</p>
-          </a>
+          </link>
 
         </div>
       </main>

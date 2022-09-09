@@ -2,12 +2,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Link from 'next/link'
+
 
 function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Tactable Assesment
+        <Navbar.Brand>Tactable Assesment
         <img
               src="tactable.jpeg"
               width="30"
@@ -19,17 +21,27 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav>
+                <link href="/">
+                    Home
+                </link>
+            </Nav>
             <NavDropdown title="Assessments" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/posts">Action</NavDropdown.Item>
-              <NavDropdown.Item href="/backend">
-                Another action
+              <NavDropdown.Item>
+                <link href="/posts">
+                    Front End
+                </link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item>
+                <link href="/backend">
+                    Back End
+                </link>
               </NavDropdown.Item>
+              <NavDropdown.Item>
+                <link href="/data">
+                    Data
+                </link>
+            </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
