@@ -38,12 +38,6 @@ async function fetchBlog() {
     <>
     <NavBar/>
     <div style={{padding: '2%'}}>
-        <Pagination
-            totalPages={totalPages}
-            currentPage={page}
-            handlePrevPage={handlePrevPage}
-            handleNextPage={handleNextPage}
-          />
     <Stack gap={2} className="col-md-5 mx-auto">
       {currentPaginationData.map((post) => (
         <Card key={post.id} style={{ width: '40em', margin: '25px 25px 25px 25px' }}>

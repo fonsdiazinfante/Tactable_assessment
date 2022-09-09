@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             <p>Posts from an API response are rendered and shown.</p>
           </Link>
 
-          <Link href="/backend" className={styles.card}>
+          {/* <Link href="/backend" className={styles.card}>
             <h2>Backend &rarr;</h2>
             <p>Backend Assessment (WIP)</p>
           </Link>
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           <Link href="/data" className={styles.card}>
             <h2>Data &rarr;</h2>
             <p>Data Assessment (WIP)</p>
-          </Link>
+          </Link> */}
 
         </div>
       </main>
