@@ -28,19 +28,16 @@ function NavBar() {
             </Nav>
             <NavDropdown title="Assessments" id="basic-nav-dropdown">
               <NavDropdown.Item>
-                <Link href="/posts">
+                <link href="/posts" />
                     Front End
-                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link href="/backend">
+                <link href="/" />
                     Back End
-                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link href="/data">
+                <link href="/" />
                     Data
-                </Link>
             </NavDropdown.Item>
             </NavDropdown>
           </Nav>
