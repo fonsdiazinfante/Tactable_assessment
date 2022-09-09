@@ -37,10 +37,10 @@ async function fetchBlog() {
   return (
     <>
     <NavBar/>
-    <div style={{padding: '2%'}}>
+    <div style={{padding: "4em"}}>
     <Stack gap={2} className="col-md-5 mx-auto">
       {currentPaginationData.map((post) => (
-        <Card key={post.id} style={{ width: '40em', margin: '25px 25px 25px 25px' }}>
+        <Card key={post.id} style={{ width: 'auto', margin: 'auto' }}>
             <Card.Img variant="top" src='books.jpeg' alt="Picture of the author"/>
             <Card.Body>
                 <Card.Title>{post.title}</Card.Title>
